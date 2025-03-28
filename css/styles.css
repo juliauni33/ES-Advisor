@@ -44,6 +44,62 @@ button:hover {
     background-color: #45a049;
 }
 
+.assistencia-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.assistencia-container h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.assistencia-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.assistencia-form label {
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.assistencia-form input,
+.assistencia-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.assistencia-form button {
+    margin-top: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.assistencia-form button:hover {
+    background-color: #45a049;
+}
+
 .faq-item {
     margin: 10px 0;
     text-align: left;
