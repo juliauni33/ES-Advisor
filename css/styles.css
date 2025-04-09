@@ -48,8 +48,8 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:center;
-    width: 100%;
+    justify-content: center;
+    width: 90%; /* responsivo em telas menores */
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
@@ -57,11 +57,6 @@ button:hover {
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     text-align: left;
-}
-
-.assistencia-container h2 {
-    margin-bottom: 15px;
-    font-size: 24px;
 }
 
 .assistencia-form {
@@ -76,53 +71,112 @@ button:hover {
     text-align: left;
 }
 
-.assistencia-form input,
-.assistencia-form textarea {
+.assistencia-form input[type="text"],
+.assistencia-form input[type="email"],
+.assistencia-form textarea,
+.assistencia-form select {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 12px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc !important;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 16px;
+    background-color: white;
+    outline: none;
+}
+
+.assistencia-form input[type="text"]:focus,
+.assistencia-form input[type="email"]:focus,
+.assistencia-form textarea:focus,
+.assistencia-form select:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 3px #4CAF50;
 }
 
 .assistencia-form button {
-    margin-top: 15px;
+    align-self: center;
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 16px;
     background-color: #4CAF50;
     color: white;
     border: none;
-    padding: 10px;
+    border-radius: 6px;
     cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .assistencia-form button:hover {
     background-color: #45a049;
 }
 
-.faq-item {
-    margin: 10px 0;
-    text-align: left;
+textarea::placeholder {
+    color: #999;
+    font-style: italic;
 }
 
 .faq-question {
-    width: 100%;
-    text-align: left;
     background-color: #4CAF50;
     color: white;
-    border: none;
     padding: 10px;
     cursor: pointer;
-    font-size: 16px;
+    border-radius: 4px;
+    margin: 10px 0;
 }
 
 .faq-question:hover {
     background-color: #45a049;
 }
 
+
 .faq-answer {
     display: none;
     padding: 10px;
     background-color: #f1f1f1;
     border-left: 4px solid #4CAF50;
+}
+
+.faq-answer.open {
+    display: block;
+}
+
+
+
+/* mobile */
+
+.menu-toggle {
+    display: none;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        margin: 10px auto;
+    }
+
+    .nav-menu ul {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        padding: 0;
+    }
+
+    .nav-menu.active ul {
+        display: flex;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
 }
