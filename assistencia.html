@@ -9,37 +9,43 @@
 <body>
     <header>
         <h1>ES ADVISOR</h1>
-        <nav>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav class="nav-menu">
             <ul>
                 <li><a href="home.html">Boas-Vindas MVP</a></li>
                 <li><a href="simulador.html">Simulador</a></li>
                 <li><a href="assistencia.html">Assistência</a></li>
-                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="informacoes.html">Informações</a></li>
             </ul>
         </nav>
     </header>
     <div class="assistencia-container">
         <h2>Precisa de ajuda?</h2>
-        <form id="assistencia-form">
-            <label for="nome">Nome:</label><br>
-            <input type="text" id="nome" name="nome" required><br><br>
-            
-            <label for="email">E-mail:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-            
-            <label for="problema">Problema:</label><br>
+        <form id="assistencia-form" class="assistencia-form">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+        
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="problema">Problema:</label>
             <select id="problema" name="problema">
                 <option value="phishing">Phishing</option>
                 <option value="roubo-de-dados">Roubo de Dados</option>
                 <option value="outro">Outro</option>
-            </select><br><br>
-            
-            <label for="mensagem">Mensagem:</label><br>
-            <textarea id="mensagem" name="mensagem" required></textarea><br><br>
-            
+            </select>
+        
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required placeholder="Conte-nos seu problema e receba suporte especializado"></textarea>
+        
             <button type="submit">Enviar</button>
         </form>
     </div>
     <script src="src/assistencia.js"></script>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

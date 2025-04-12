@@ -6,21 +6,26 @@
     <title>Boas-Vindas</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <header>
-        <h1>ES ADVISOR</h1>
-        <nav>
-            <ul>
-                <li><a href="home.html">Boas-Vindas MVP</a></li>
-                <li><a href="simulador.html">Simulador</a></li>
-                <li><a href="assistencia.html">Assistência</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+  <h1>ES ADVISOR</h1>
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  <nav class="nav-menu">
+      <ul>
+          <li><a href="home.html">Boas-Vindas MVP</a></li>
+          <li><a href="simulador.html">Simulador</a></li>
+          <li><a href="assistencia.html">Assistência</a></li>
+          <li><a href="informacoes.html">Informações</a></li>
+      </ul>
+  </nav>
+</header>
     <div class="container">
         <h2>Bem-vindo ao ES Advisor</h2>
         <p>Escolha uma opção no menu para começar.</p>
     </div>
+    <script>
+      function toggleMenu() {
+          document.querySelector('.nav-menu').classList.toggle('active');
+      }
+  </script>
 </body>
 </html>
