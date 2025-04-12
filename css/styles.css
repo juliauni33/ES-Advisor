@@ -143,8 +143,6 @@ textarea::placeholder {
     display: block;
 }
 
-
-
 /* mobile */
 
 .menu-toggle {
@@ -200,7 +198,8 @@ textarea::placeholder {
     width: 15%; /* Reduzido de 30% para metade da largura */
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    margin-top: 20px;
+    /*align-items: stretch;*/
   }
   
   .lista-emails button {
@@ -209,7 +208,8 @@ textarea::placeholder {
     border: 1px solid #99ccff;
     padding: 10px;
     text-align: left;
-    margin-bottom: 8px;
+    margin-top: 10px;
+   /* margin-bottom: 8px;*/
     font-weight: bold;
     cursor: pointer;
   }
@@ -291,11 +291,12 @@ textarea::placeholder {
   }
   
   .controles-simulador {
-    margin-top: 20px;
+    /*margin-top: 20px;*/
   }
   
   .controles-simulador button {
     background-color: #ff4d4d;
+    color: white;
     margin-top: 10px;
   }
   

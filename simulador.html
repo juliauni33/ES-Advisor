@@ -6,24 +6,31 @@
     <title>Simulador</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+<header>
+    <h1>ES ADVISOR</h1>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="home.html">Boas-Vindas MVP</a></li>
+            <li><a href="simulador.html">Simulador</a></li>
+            <li><a href="assistencia.html">Assistência</a></li>
+            <li><a href="informacoes.html">Informações</a></li>
+        </ul>
+    </nav>
+</header>
 <body>
-    <header>
-        <h1>ES ADVISOR</h1>
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-        <nav class="nav-menu">
-            <ul>
-                <li><a href="home.html">Boas-Vindas MVP</a></li>
-                <li><a href="simulador.html">Simulador</a></li>
-                <li><a href="assistencia.html">Assistência</a></li>
-                <li><a href="informacoes.html">Informações</a></li>
-            </ul>
-        </nav>
-    </header>
+    
     <main>
         <button id="startBtn">Iniciar Simulação</button>
         <section id="simuladorContainer"></section>
     </main>
     
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+          }
+    </script>
+  
     <script src="src/simulador.js"></script>
 </body>
 </html>
